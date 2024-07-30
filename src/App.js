@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to My Portfolio</h1>
-        <p>
+        <h1 className="App-title">Welcome to My Portfolio</h1>
+        <p className="App-intro">
           Hi, I'm [Your Name], a passionate software developer with expertise in web and mobile applications. Explore my work and get in touch!
         </p>
         <section className="Skills">
@@ -73,4 +73,3 @@ function App() {
 }
 
 export default App;
-
