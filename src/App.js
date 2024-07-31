@@ -90,7 +90,7 @@ function App() {
               ))}
             </span>
           </h1>
-          <p className="App-intro typewriter">{introText}</p> {/* Apply typewriter effect here */}
+          <p className="App-intro">{introText}</p> {/* Removed typewriter effect here */}
         </section>
         <section id="skills" className="Skills">
           <h2>Skills</h2>
@@ -100,6 +100,11 @@ function App() {
             <div className="Skills-tile">React & Redux</div>
             <div className="Skills-tile">SQL & Database Management</div>
             <div className="Skills-tile">Machine Learning & AI</div>
+            <div className="Skills-tile">JavaScript</div>
+            <div className="Skills-tile">HTML & CSS</div>
+            <div className="Skills-tile">Azure</div>
+            <div className="Skills-tile">Bootstrap</div>
+            <div className="Skills-tile">Version Control (Git)</div>
           </div>
         </section>
 
@@ -108,12 +113,12 @@ function App() {
           <div className="container">
             <div className="row">
               {projects.map((project) => (
-                <div key={project.id} className="col-md-2 mb-4">
+                <div key={project.id} className="" style={{ margin: '10px' }}>
                   <div className="card">
                     <img src={project.image} className="card-img-top" alt={project.title} />
                     <div className="card-body">
                       <h2 className="card-title">{project.title}</h2>
-                      <div className="card-text" style={{ overflowY: 'auto', height: '100px', width: 'auto' }}>
+                      <div className="card-text" style={{ overflowY: 'auto', height: '150px', width: 'auto' }}>
                         <div className="card-text-content">{project.fullDescription}</div>
                       </div>
                     </div>
