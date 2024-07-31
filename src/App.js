@@ -7,6 +7,11 @@ import projects from './projects'; // Import the projects data
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [welcomeText, setWelcomeText] = useState('');
+  const [introText, setIntroText] = useState('');
+  const [welcomeTextCompleted, setWelcomeTextCompleted] = useState(false);
+  const welcomeMessage = "Welcome to My ";
+  const introMessage = "Hi, I'm Zeeshan Javaid, a passionate software developer with expertise in web and mobile applications.";
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -15,6 +20,27 @@ function App() {
       document.body.classList.add('dark-mode');
     }
   }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setWelcomeText(welcomeMessage.slice(0, index));
+      index += 1;
+      if (index > welcomeMessage.length) {
+        clearInterval(interval);
+        setWelcomeTextCompleted(true); // Update state to remove cursor
+      }
+    }, 100); // Adjust typing speed here
+  }, [welcomeMessage]);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setIntroText(introMessage.slice(0, index));
+      index += 1;
+      if (index > introMessage.length) clearInterval(interval);
+    }, 50); // Adjust typing speed here
+  }, [introMessage]);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -54,10 +80,17 @@ function App() {
         </nav>
         <section id="home" className="Home">
           <img src={profilePhoto} alt="Profile" className="Profile-photo" />
-          <h1 className="App-title">Welcome to My Portfolio</h1>
-          <p className="App-intro">
-            Hi, I'm Zeeshan Javaid, a passionate software developer with expertise in web and mobile applications. Explore my work and get in touch!
-          </p>
+          <h1 className="App-title">
+            <span className={`typewriter ${welcomeTextCompleted ? 'no-cursor' : ''}`}>
+              {welcomeText.split('portfolio').map((part, index) => (
+                <React.Fragment key={index}>
+                  {part}
+                  {index === 0 && <span className="highlighted">portfolio</span>}
+                </React.Fragment>
+              ))}
+            </span>
+          </h1>
+          <p className="App-intro typewriter">{introText}</p> {/* Apply typewriter effect here */}
         </section>
         <section id="skills" className="Skills">
           <h2>Skills</h2>

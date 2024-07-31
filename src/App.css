@@ -572,3 +572,47 @@ input:checked+.slider:before {
   background-color: #003135;
   /* Dark Teal */
 }
+
+.typewriter {
+  display: inline;
+  overflow: hidden;
+  /* Ensures text disappears at the end of the animation */
+  white-space: nowrap;
+  /* Keeps the text in a single line */
+  border-right: .15em solid orange;
+  /* Creates a cursor effect */
+  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+.no-cursor {
+  border-color: transparent;
+  /* Hide the cursor */
+  animation: none;
+  /* Remove animation after typing is complete */
+}
+
+.highlighted {
+  color: orange;
+}
