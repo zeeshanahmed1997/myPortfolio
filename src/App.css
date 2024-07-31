@@ -3,15 +3,19 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
+.Profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .App-title {
   font-size: 3rem;
-  color: #282c34;
+  color: #003135;
+  /* Dark Teal */
   margin-top: 20px;
   animation: fadeIn 2s ease-in-out;
 }
@@ -25,80 +29,276 @@
 }
 
 section {
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
+  max-width: 1200px;
+}
+
+/* Specific Section Styles */
+.Home {
+  background-color: #ffffff;
+  /* White */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow for light mode */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Skills,
 .Projects,
 .Contact {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+  /* White */
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow for light mode */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.Skills ul,
-.Projects ul {
+.Skills {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+}
+
+.Skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* Space between tiles */
+}
+
+.Skills-tile {
+  background-color: #024950;
+  /* Deep Blue Teal */
+  color: #ffffff;
+  /* White */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow for tiles */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 20px;
+  /* Fixed height */
+  width: 200px;
+  /* Adjust width as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Skills-tile:hover {
+  background-color: #003135;
+  /* Dark Teal */
+  transform: scale(1.05);
+}
+
+.Projects a,
+.Contact a {
+  color: #0fa4af;
+  /* Bright Teal */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Projects a:hover,
+.Contact a:hover {
+  color: #003135;
+  /* Dark Teal */
+}
+
+/* Navbar Styles */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Align items to the left and right */
+  align-items: center;
+  padding: 10px;
+  background-color: #024950;
+  /* Deep Blue Teal */
+  color: #ffffff;
+  /* White */
+}
+
+.Navbar ul {
   list-style-type: none;
+  display: flex;
+  margin: 0;
   padding: 0;
 }
 
-.Skills li,
-.Projects li {
-  padding: 10px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s;
+.Navbar li {
+  margin: 0 15px;
+  /* Adjusted spacing for better alignment */
 }
 
-.Skills li:hover,
-.Projects li:hover {
-  background-color: #e0e0e0;
-}
-
-.Projects a {
+.Navbar a {
+  color: #ffffff;
+  /* White */
   text-decoration: none;
-  color: #61dafb;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.Projects a:hover {
-  color: #21a0f6;
+.Navbar a:hover {
+  color: #0fa4af;
+  /* Bright Teal */
 }
 
-.Contact a {
-  color: #61dafb;
-  text-decoration: none;
-  transition: color 0.3s;
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-.Contact a:hover {
-  color: #21a0f6;
+.hamburger div {
+  background-color: #ffffff;
+  /* White */
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-  font-size: 1.2rem;
-  margin-top: 20px;
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #003135;
+  /* Dark Teal */
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+.dark-mode .Home {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
+.dark-mode .App-intro {
+  color: #afdde5;
+  /* Pale Blue for better readability */
+}
+
+.dark-mode .Profile-photo {
+  border: 3px solid #afdde5;
+  /* Pale Blue border to highlight the profile photo */
+}
+
+.dark-mode .Skills {
+  background-color: #003135;
+  /* Dark Teal */
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+.dark-mode .Skills-tile {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow for dark mode */
+}
+
+.dark-mode .Skills-tile:hover {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
+.dark-mode .Projects a,
+.dark-mode .Contact a {
+  color: #0fa4af;
+  /* Bright Teal */
+}
+
+.dark-mode .Projects a:hover,
+.dark-mode .Contact a:hover {
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+.dark-mode .Navbar {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
+.dark-mode .Navbar a {
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+.dark-mode .Navbar a:hover {
+  color: #0fa4af;
+  /* Bright Teal */
+}
+
+.dark-mode .Theme-toggle {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+}
+
+.dark-mode .Theme-toggle:hover {
+  background-color: #003135;
+  /* Dark Teal */
+}
+
+/* Toggle Switch Styles */
+.Theme-toggle {
+  position: relative;
   display: inline-block;
-  transition: color 0.3s;
+  width: 60px;
+  height: 34px;
 }
 
-.App-link:hover {
-  color: #21a0f6;
+.Theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-/* Animations */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* Light Gray */
+  transition: .4s;
+  border-radius: 34px;
 }
 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #0fa4af;
+  /* Bright Teal */
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark Mode Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -119,4 +319,204 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .App-title {
+    font-size: 2.5rem;
+  }
+
+  .App-intro {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .Navbar ul {
+    display: none;
+    /* Hide standard navbar on mobile */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Navbar.active ul {
+    display: flex;
+    /* Show navbar when hamburger menu is clicked */
+  }
+
+  .Navbar li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .Profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Skills-tile {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .Skills-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-title {
+    font-size: 2rem;
+  }
+
+  .App-intro {
+    font-size: 0.9rem;
+    width: 95%;
+  }
+
+  .Navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Navbar li {
+    margin: 8px 0;
+  }
+
+  .Profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .Skills-tile {
+    width: 90%;
+    margin: auto;
+  }
+
+  .Skills-container {
+    flex-direction: column;
+  }
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: auto;
+  /* Fixed width */
+  height: 400px;
+  /* Fixed height */
+  margin: 10px;
+  /* Space between cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 60%;
+  /* Fixed height for the image */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  /* Adjust padding */
+  font-size: 0.9rem;
+  /* Smaller text size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1rem;
+  /* Smaller title size */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  /* Smaller description text */
+}
+
+.btn-primary {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  border: none;
+  padding: 5px 10px;
+  /* Adjust button padding */
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem;
+  /* Smaller button text */
+  text-align: center;
+  align-self: flex-start;
+}
+
+.btn-primary:hover {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
+/* Card Container Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center the cards horizontally */
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Prevent wrapping to a new row */
+  overflow-x: auto;
+  /* Allow horizontal scrolling if needed */
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
 }
