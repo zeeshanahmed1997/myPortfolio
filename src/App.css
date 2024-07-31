@@ -403,70 +403,6 @@ input:checked+.slider:before {
 }
 
 /* Card Styles */
-.card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: auto;
-  /* Fixed width */
-  height: 400px;
-  /* Fixed height */
-  margin: 10px;
-  /* Space between cards */
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 60%;
-  /* Fixed height for the image */
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 10px;
-  /* Adjust padding */
-  font-size: 0.9rem;
-  /* Smaller text size */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title {
-  font-size: 1rem;
-  /* Smaller title size */
-  margin-bottom: 0.5rem;
-}
-
-.card-text {
-  font-size: 0.8rem;
-  /* Smaller description text */
-}
-
-.btn-primary {
-  background-color: #0fa4af;
-  /* Bright Teal */
-  border: none;
-  padding: 5px 10px;
-  /* Adjust button padding */
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 0.8rem;
-  /* Smaller button text */
-  text-align: center;
-  align-self: flex-start;
-}
-
-.btn-primary:hover {
-  background-color: #024950;
-  /* Deep Blue Teal */
-}
-
 /* Card Container Styles */
 .container {
   display: flex;
@@ -477,46 +413,162 @@ input:checked+.slider:before {
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
-  /* Prevent wrapping to a new row */
-  overflow-x: auto;
-  /* Allow horizontal scrolling if needed */
-}
-
-/* Popup Styles */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  /* Allow wrapping for mobile */
   justify-content: center;
-  z-index: 1000;
+  /* Center the cards horizontally */
 }
 
-.popup-content {
-  background: #fff;
+/* Card Styles */
+/* General Styles */
+.App {
+  text-align: center;
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
-  max-width: 80%;
-  max-height: 80%;
-  overflow: auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+  /* Adjust height to fit content */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
-.popup-image {
-  width: 100%;
-  height: auto;
+/* Add a shadow and scale effect on hover */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.popup-close {
+/* Image styling */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  /* Adjust height as needed */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Scale image on hover */
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Body styling */
+.card-body {
+  padding: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title styling */
+.card-title {
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Text styling */
+.card-text {
+  font-size: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+  /* Adjust height as needed */
+  transition: color 0.3s ease;
+}
+
+/* Scrolling animation for text */
+.card-text-content {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
+  top: 100%;
+  /* Start position for scrolling */
+  animation: scroll-up 10s linear infinite;
+  /* Adjust the duration as needed */
+  white-space: pre-wrap;
+  /* Maintain line breaks */
+  word-wrap: break-word;
+  text-align: start;
+  /* Break long words */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll-up {
+  0% {
+    top: 100%;
+    /* Start off-screen */
+  }
+
+  100% {
+    top: -100%;
+    /* End off-screen */
+  }
+}
+
+/* Responsive Styles for Cards */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Stack cards vertically */
+  }
+
+  .card {
+    max-width: 100%;
+    /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: auto;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Dark Mode Styles for Cards */
+.dark-mode .card {
+  background-color: #003135;
+  /* Dark Teal */
+  color: #afdde5;
+  /* Pale Blue */
+  border-color: none;
+  /* Deep Blue Teal */
+}
+
+/* Dark Mode Title */
+.dark-mode .card-title {
+  color: #ffffff;
+  /* White */
+}
+
+/* Dark Mode Text */
+.dark-mode .card-text {
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+/* Resume Link Styling */
+.Resume-link {
+  display: inline-block;
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.Resume-link:hover {
+  background-color: #003135;
+  /* Dark Teal */
 }

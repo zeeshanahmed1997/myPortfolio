@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import profilePhoto from './assets/images/profile-photo.jpg';
-import projectImage1 from './assets/images/profile-photo.jpg';
-import projectImage2 from './assets/images/profile-photo.jpg';
-import projectImage3 from './assets/images/profile-photo.jpg';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Project 1',
-    shortDescription: 'A brief description of Project 1.',
-    fullDescription: 'Detailed description of Project 1.',
-    image: projectImage1,
-  },
-  {
-    id: 2,
-    title: 'Project 2',
-    shortDescription: 'A brief description of Project 2.',
-    fullDescription: 'Detailed description of Project 2.',
-    image: projectImage2,
-  },
-  {
-    id: 3,
-    title: 'Project 3',
-    shortDescription: 'A brief description of Project 3.',
-    fullDescription: 'Detailed description of Project 3.',
-    image: projectImage3,
-  },
-];
+import resume from './assets/documents/Zeeshan.pdf'; // Import your resume file here
+import projects from './projects'; // Import the projects data
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   useEffect(() => {
@@ -53,14 +27,6 @@ function App() {
     }
   };
 
-  const openPopup = (project) => {
-    setSelectedProject(project);
-  };
-
-  const closePopup = () => {
-    setSelectedProject(null);
-  };
-
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
@@ -79,6 +45,7 @@ function App() {
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href={resume} download>Resume</a></li> {/* Added Resume link */}
           </ul>
           <label className="Theme-toggle">
             <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
@@ -108,15 +75,14 @@ function App() {
           <div className="container">
             <div className="row">
               {projects.map((project) => (
-                <div key={project.id} className="col-md-3">
+                <div key={project.id} className="col-md-2 mb-4">
                   <div className="card">
                     <img src={project.image} className="card-img-top" alt={project.title} />
                     <div className="card-body">
-                      <h5 className="card-title">{project.title}</h5>
-                      <p className="card-text">{project.shortDescription}</p>
-                      <button className="btn btn-primary" onClick={() => openPopup(project)}>
-                        Read More
-                      </button>
+                      <h2 className="card-title">{project.title}</h2>
+                      <div className="card-text" style={{ overflowY: 'auto', height: '100px', width: 'auto' }}>
+                        <div className="card-text-content">{project.fullDescription}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -132,17 +98,6 @@ function App() {
           </p>
         </section>
       </header>
-
-      {selectedProject && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="popup-close" onClick={closePopup}>×</span>
-            <img src={selectedProject.image} alt={selectedProject.title} className="popup-image" />
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.fullDescription}</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
