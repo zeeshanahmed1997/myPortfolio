@@ -504,6 +504,24 @@ input:checked+.slider:before {
   /* Break long words */
 }
 
+/* Technologies Section */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tech-tile {
+  background-color: #024950;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Keyframes for scrolling effect */
 @keyframes scroll-up {
   0% {
@@ -552,6 +570,15 @@ input:checked+.slider:before {
 .dark-mode .card-title {
   color: #ffffff;
   /* White */
+}
+
+.dark-mode .tech-tile {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow for dark mode */
 }
 
 /* Dark Mode Text */
