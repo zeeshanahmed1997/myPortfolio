@@ -413,161 +413,75 @@ input:checked+.slider:before {
   display: flex;
   flex-wrap: wrap;
   /* Allow wrapping for mobile */
-  justify-content: center;
-  /* Center the cards horizontally */
-}
-
-.card {
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  height: 500px;
-  border: 1px solid gainsboro;
-  /* Adjust height to fit content */
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  width: 100%;
-  height: 250px;
-  /* Adjust height as needed */
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-top {
-  transform: scale(1.1);
-}
-
-.card-body {
-  padding: 10px;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
+.card {
+  background-color: #ffffff;
+  /* White */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow for light mode */
+  margin: 20px;
+  /* Margin between cards */
+  overflow: hidden;
+  /* Hide overflowing content */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  /* Fixed height for images */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
 .card-title {
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  color: #003135;
+  /* Dark Teal */
+  margin-bottom: 10px;
 }
 
 .card-text {
-  font-size: 0.8rem;
-  overflow: hidden;
-  position: relative;
-  height: 100px;
-  /* Adjust height as needed */
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  color: #333;
 }
 
-.card-text-content {
-  position: absolute;
-  font-size: 15px;
-  top: 100%;
-  /* Start position for scrolling */
-  animation: scroll-up 10s linear infinite;
-  /* Adjust the duration as needed */
-  white-space: pre-wrap;
-  /* Maintain line breaks */
-  word-wrap: break-word;
-  text-align: start;
-  /* Break long words */
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  justify-content: center;
-  margin-top: 0px;
-}
-
-.tech-item {
-  text-align: start;
-}
-
-.tech-tile {
-  background-color: #024950;
+.card-button {
+  background-color: #0fa4af;
   /* Bright Teal */
+  border: none;
   color: #ffffff;
   /* White */
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
-@keyframes scroll-up {
-  0% {
-    top: 100%;
-    /* Start off-screen */
-  }
-
-  100% {
-    top: -100%;
-    /* End off-screen */
-  }
+.card-button:hover {
+  background-color: #003135;
+  /* Dark Teal */
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    /* Stack cards vertically */
-  }
-
-  .card {
-    max-width: 100%;
-    /* Full width on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    height: auto;
-    width: 100%;
-    margin: 5px 0;
-  }
-}
-
-.technologies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: start;
-  margin-top: 0px;
-}
-
-.tech-category {
-  text-align: center !important;
-}
-
+/* Dark Mode */
 .dark-mode .card {
   background-color: #003135;
   /* Dark Teal */
-  color: #afdde5;
-  /* Pale Blue */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow for dark mode */
 }
 
 .dark-mode .card-title {
-  color: #ffffff;
-  /* White */
-}
-
-.dark-mode .tech-tile {
-  background-color: #0fa4af;
-  /* Bright Teal */
-  color: #ffffff;
-  /* White */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  /* Enhanced shadow for dark mode */
+  color: #afdde5;
+  /* Pale Blue */
 }
 
 .dark-mode .card-text {
@@ -575,71 +489,12 @@ input:checked+.slider:before {
   /* Pale Blue */
 }
 
-.Resume-link {
-  display: inline-block;
+.dark-mode .card-button {
   background-color: #0fa4af;
   /* Bright Teal */
-  color: #ffffff;
-  /* White */
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
-.Resume-link:hover {
-  background-color: #003135;
-  /* Dark Teal */
-}
-
-.typewriter {
-  display: inline;
-  overflow: auto;
-  /* Ensures text disappears at the end of the animation */
-  white-space: nowrap;
-  /* Keeps the text in a single line */
-  border-right: .15em solid orange;
-  /* Creates a cursor effect */
-  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: orange;
-  }
-}
-
-.no-cursor {
-  border-color: transparent;
-  /* Hide the cursor */
-  animation: none;
-  /* Remove animation after typing is complete */
-}
-
-.highlighted {
-  color: orange;
-}
-
-.Lottie-animation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+.dark-mode .card-button:hover {
+  background-color: #024950;
+  /* Deep Blue Teal */
 }
