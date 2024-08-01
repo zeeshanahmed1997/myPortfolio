@@ -12,9 +12,14 @@ const ProjectsSection = ({ projects }) => (
                             <div className="card-body">
                                 <h2 className="card-title">{project.title}</h2>
                                 <div className="technologies">
-                                    {project.technologies.map((tech, index) => (
-                                        <div key={index} className="tech-tile">
-                                            {tech}
+                                    {Object.entries(project.technologies).map(([category, techs], index) => (
+                                        <div key={index} className="tech-category">
+                                            <h5>{category.charAt(0).toUpperCase() + category.slice(1)}</h5>
+                                            <ul>
+                                                {techs.map((tech, idx) => (
+                                                    <li key={idx} className="tech-item">{tech}</li>
+                                                ))}
+                                            </ul>
                                         </div>
                                     ))}
                                 </div>

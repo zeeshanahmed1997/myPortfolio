@@ -8,7 +8,11 @@ const projects = [
         title: 'Ecommerce Store',
         shortDescription: 'A customizable eCommerce platform with dynamic color schemes and advanced features.',
         fullDescription: 'This eCommerce app offers a highly customizable and dynamic shopping experience with features like dynamic color schemes, customizable categories, theme variability, advanced search, real-time inventory updates, secure payment integration, and detailed analytics.',
-        technologies: ['React JS', 'CSS', 'Bootstrap', 'ASP.NET Core Web API', 'MySql'],
+        technologies: {
+            frontend: ['React JS', 'CSS', 'Bootstrap'],
+            backend: ['ASP.NET Core Web API'],
+            database: ['MySql'],
+        },
         image: projectImage1,
     },
     {
@@ -16,7 +20,11 @@ const projects = [
         title: 'Linscriptum',
         shortDescription: 'A comprehensive medical app for managing prescriptions, orders, and healthcare communication.',
         fullDescription: 'Linscriptum streamlines healthcare management by integrating features such as medicine ordering, prescription management, order history, and real-time chat with doctors and pharmacies.',
-        technologies: ['React JS', 'CSS', 'Bootstrap', 'ASP.NET Core Web API', 'MySql'],
+        technologies: {
+            frontend: ['React JS', 'CSS', 'Bootstrap'],
+            backend: ['ASP.NET Core Web API'],
+            database: ['MySql'],
+        },
         image: projectImage2,
     },
     {
@@ -24,7 +32,11 @@ const projects = [
         title: 'Lotus Ai',
         shortDescription: 'A time tracking tool for legal professionals with a focus on client confidentiality and accuracy.',
         fullDescription: 'Lotus Ai is a reliable time tracking tool designed for legal professionals, offering intuitive design, client confidentiality, effortless integration, accurate time tracking, and customizable settings.',
-        technologies: ['React JS', 'CSS', 'Bootstrap', 'ASP.NET Core Web API', 'MySql'],
+        technologies: {
+            frontend: ['React JS', 'CSS', 'Bootstrap'],
+            backend: ['ASP.NET Core Web API'],
+            database: ['MySql'],
+        },
         image: projectImage3,
     },
 ];

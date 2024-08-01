@@ -14,6 +14,15 @@ const SkillsSection = () => (
             <div className="Skills-tile">Azure</div>
             <div className="Skills-tile">Bootstrap</div>
             <div className="Skills-tile">Version Control (Git)</div>
+            <div className="Skills-tile">RESTful API Development</div>
+            <div className="Skills-tile">Docker & Containerization</div>
+            <div className="Skills-tile">CI/CD Pipelines</div>
+            <div className="Skills-tile">Agile Methodologies</div>
+            <div className="Skills-tile">Unit Testing & Test-Driven Development (TDD)</div>
+            <div className="Skills-tile">GraphQL</div>
+            <div className="Skills-tile">Cloud Services (AWS)</div>
+            <div className="Skills-tile">Security Best Practices</div>
+            <div className="Skills-tile">Microservices Architecture</div>
         </div>
     </section>
 );

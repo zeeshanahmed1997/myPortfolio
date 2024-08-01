@@ -1,6 +1,14 @@
 /* General Styles */
 .App {
   text-align: center;
+  background-color: #ffffff;
+  /* Light mode background */
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .App {
+  background-color: #003135;
+  /* Dark mode background */
 }
 
 .Profile-photo {
@@ -47,6 +55,11 @@ section {
   justify-content: center;
 }
 
+.dark-mode .Home {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
 .Skills,
 .Projects,
 .Contact {
@@ -64,6 +77,13 @@ section {
   /* Bright Teal */
   color: #ffffff;
   /* White */
+}
+
+.dark-mode .Skills {
+  background-color: #003135;
+  /* Dark Teal */
+  color: #afdde5;
+  /* Pale Blue */
 }
 
 .Skills-container {
@@ -100,6 +120,20 @@ section {
   transform: scale(1.05);
 }
 
+.dark-mode .Skills-tile {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Enhanced shadow for dark mode */
+}
+
+.dark-mode .Skills-tile:hover {
+  background-color: #024950;
+  /* Deep Blue Teal */
+}
+
 .Projects a,
 .Contact a {
   color: #0fa4af;
@@ -114,6 +148,18 @@ section {
   /* Dark Teal */
 }
 
+.dark-mode .Projects a,
+.dark-mode .Contact a {
+  color: #0fa4af;
+  /* Bright Teal */
+}
+
+.dark-mode .Projects a:hover,
+.dark-mode .Contact a:hover {
+  color: #afdde5;
+  /* Pale Blue */
+}
+
 /* Navbar Styles */
 .Navbar {
   display: flex;
@@ -125,6 +171,11 @@ section {
   /* Deep Blue Teal */
   color: #ffffff;
   /* White */
+}
+
+.dark-mode .Navbar {
+  background-color: #024950;
+  /* Deep Blue Teal */
 }
 
 .Navbar ul {
@@ -151,6 +202,16 @@ section {
   /* Bright Teal */
 }
 
+.dark-mode .Navbar a {
+  color: #afdde5;
+  /* Pale Blue */
+}
+
+.dark-mode .Navbar a:hover {
+  color: #0fa4af;
+  /* Bright Teal */
+}
+
 /* Hamburger Menu Styles */
 .hamburger {
   display: none;
@@ -165,89 +226,6 @@ section {
   width: 25px;
   margin: 3px 0;
   transition: 0.3s;
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: #003135;
-  /* Dark Teal */
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.dark-mode .Home {
-  background-color: #024950;
-  /* Deep Blue Teal */
-}
-
-.dark-mode .App-intro {
-  color: #afdde5;
-  /* Pale Blue for better readability */
-}
-
-.dark-mode .Profile-photo {
-  border: 3px solid #afdde5;
-  /* Pale Blue border to highlight the profile photo */
-}
-
-.dark-mode .Skills {
-  background-color: #003135;
-  /* Dark Teal */
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.dark-mode .Skills-tile {
-  background-color: #0fa4af;
-  /* Bright Teal */
-  color: #ffffff;
-  /* White */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  /* Enhanced shadow for dark mode */
-}
-
-.dark-mode .Skills-tile:hover {
-  background-color: #024950;
-  /* Deep Blue Teal */
-}
-
-.dark-mode .Projects a,
-.dark-mode .Contact a {
-  color: #0fa4af;
-  /* Bright Teal */
-}
-
-.dark-mode .Projects a:hover,
-.dark-mode .Contact a:hover {
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.dark-mode .Navbar {
-  background-color: #024950;
-  /* Deep Blue Teal */
-}
-
-.dark-mode .Navbar a {
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.dark-mode .Navbar a:hover {
-  color: #0fa4af;
-  /* Bright Teal */
-}
-
-.dark-mode .Theme-toggle {
-  background-color: #0fa4af;
-  /* Bright Teal */
-  color: #ffffff;
-  /* White */
-}
-
-.dark-mode .Theme-toggle:hover {
-  background-color: #003135;
-  /* Dark Teal */
 }
 
 /* Toggle Switch Styles */
@@ -296,6 +274,18 @@ input:checked+.slider {
 
 input:checked+.slider:before {
   transform: translateX(26px);
+}
+
+.dark-mode .Theme-toggle {
+  background-color: #0fa4af;
+  /* Bright Teal */
+  color: #ffffff;
+  /* White */
+}
+
+.dark-mode .Theme-toggle:hover {
+  background-color: #003135;
+  /* Dark Teal */
 }
 
 /* Dark Mode Animation */
@@ -362,6 +352,11 @@ input:checked+.slider:before {
     height: 120px;
   }
 
+  .Skills-container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .Skills-tile {
     width: 90%;
     margin: 0 auto;
@@ -397,17 +392,16 @@ input:checked+.slider:before {
   }
 
   .Skills-tile {
-    width: 90%;
-    margin: auto;
+    width: 20%;
+    font-size: 12px;
   }
 
   .Skills-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
 /* Card Styles */
-/* Card Container Styles */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -423,34 +417,23 @@ input:checked+.slider:before {
   /* Center the cards horizontally */
 }
 
-/* Card Styles */
-/* General Styles */
-.App {
-  text-align: center;
-}
-
-/* Card Styles */
 .card {
-  /* border: 1px solid #ddd; */
-  /* border-radius: 8px; */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   height: 500px;
+  border: 1px solid gainsboro;
   /* Adjust height to fit content */
-  /* margin-bottom: 10px; */
   margin: auto;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-/* Add a shadow and scale effect on hover */
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Image styling */
 .card-img-top {
   width: 100%;
   height: 250px;
@@ -459,12 +442,10 @@ input:checked+.slider:before {
   transition: transform 0.3s ease;
 }
 
-/* Scale image on hover */
 .card:hover .card-img-top {
   transform: scale(1.1);
 }
 
-/* Body styling */
 .card-body {
   padding: 10px;
   font-size: 0.9rem;
@@ -473,13 +454,11 @@ input:checked+.slider:before {
   justify-content: space-between;
 }
 
-/* Title styling */
 .card-title {
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
-/* Text styling */
 .card-text {
   font-size: 0.8rem;
   overflow: hidden;
@@ -489,7 +468,6 @@ input:checked+.slider:before {
   transition: color 0.3s ease;
 }
 
-/* Scrolling animation for text */
 .card-text-content {
   position: absolute;
   font-size: 15px;
@@ -504,12 +482,16 @@ input:checked+.slider:before {
   /* Break long words */
 }
 
-/* Technologies Section */
 .technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-top: 0px;
+}
+
+.tech-item {
+  text-align: start;
 }
 
 .tech-tile {
@@ -522,7 +504,6 @@ input:checked+.slider:before {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Keyframes for scrolling effect */
 @keyframes scroll-up {
   0% {
     top: 100%;
@@ -535,7 +516,6 @@ input:checked+.slider:before {
   }
 }
 
-/* Responsive Styles for Cards */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -556,17 +536,13 @@ input:checked+.slider:before {
   }
 }
 
-/* Dark Mode Styles for Cards */
 .dark-mode .card {
   background-color: #003135;
   /* Dark Teal */
   color: #afdde5;
   /* Pale Blue */
-  border-color: none;
-  /* Deep Blue Teal */
 }
 
-/* Dark Mode Title */
 .dark-mode .card-title {
   color: #ffffff;
   /* White */
@@ -581,13 +557,11 @@ input:checked+.slider:before {
   /* Enhanced shadow for dark mode */
 }
 
-/* Dark Mode Text */
 .dark-mode .card-text {
   color: #afdde5;
   /* Pale Blue */
 }
 
-/* Resume Link Styling */
 .Resume-link {
   display: inline-block;
   background-color: #0fa4af;
