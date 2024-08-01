@@ -11,10 +11,10 @@ const ContactSection = () => (
         <p>
             <SocialIcon url="tel:+923430421728" /> +923430421728
         </p>
-        <div className="social-icons">
-            <SocialIcon url="https://www.linkedin.com/in/zeeshanjavaid1997" target="_blank" />
-            <SocialIcon url="https://www.facebook.com/MS18RCP43633245902032FE/" target="_blank" />
-            <SocialIcon url="https://www.instagram.com/zeeshanformanite/" target="_blank" />
+        <div className="social-icons" style={{ margin: '10px' }}>
+            <SocialIcon url="https://www.linkedin.com/in/zeeshanjavaid1997" target="_blank" style={{ margin: '10px' }} />
+            <SocialIcon url="https://www.facebook.com/MS18RCP43633245902032FE/" target="_blank" style={{ margin: '10px' }} />
+            <SocialIcon url="https://www.instagram.com/zeeshanformanite/" target="_blank" style={{ margin: '10px' }} />
         </div>
     </section>
 );
