@@ -13,7 +13,7 @@ const ProjectsSection = ({ projects }) => (
                                 <h2 className="card-title">{project.title}</h2>
                                 <div className="technologies">
                                     {Object.entries(project.technologies).map(([category, techs], index) => (
-                                        <div key={index} className="tech-category">
+                                        <div key={index} className="tech-category" style={{ textAlign: 'center', justifyContent: 'center' }}>
                                             <h5>{category.charAt(0).toUpperCase() + category.slice(1)}</h5>
                                             <ul>
                                                 {techs.map((tech, idx) => (
