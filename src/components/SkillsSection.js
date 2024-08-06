@@ -1,28 +1,58 @@
 import React from 'react';
+// import 'devicon/devicon.min.css'; // Make sure to import the Devicon stylesheet
 
 const SkillsSection = () => (
     <section id="skills" className="Skills">
         <h2>Skills</h2>
         <div className="Skills-container">
-            <div className="Skills-tile">ASP.NET Development</div>
-            <div className="Skills-tile">MAUI & Xamarin.Forms</div>
-            <div className="Skills-tile">React & Redux</div>
-            <div className="Skills-tile">SQL & Database Management</div>
-            <div className="Skills-tile">Machine Learning & AI</div>
-            <div className="Skills-tile">JavaScript</div>
-            <div className="Skills-tile">HTML & CSS</div>
-            <div className="Skills-tile">Azure</div>
-            <div className="Skills-tile">Bootstrap</div>
-            <div className="Skills-tile">Version Control (Git)</div>
-            <div className="Skills-tile">RESTful API Development</div>
-            <div className="Skills-tile">Docker & Containerization</div>
-            <div className="Skills-tile">CI/CD Pipelines</div>
-            <div className="Skills-tile">Agile Methodologies</div>
-            <div className="Skills-tile">Unit Testing & Test-Driven Development (TDD)</div>
-            <div className="Skills-tile">GraphQL</div>
-            <div className="Skills-tile">Cloud Services (AWS)</div>
-            <div className="Skills-tile">Security Best Practices</div>
-            <div className="Skills-tile">Microservices Architecture</div>
+            <div className="Skills-tile">
+                <i className="devicon-dotnetcore-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-xamarin-original colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-react-original colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-mysql-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-python-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-javascript-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-html5-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-azure-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-bootstrap-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-git-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-nodejs-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-docker-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-circleci-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-jest-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-graphql-plain colored"></i>
+            </div>
+            <div className="Skills-tile">
+                <i className="devicon-java-plain colored"></i>
+            </div>
         </div>
     </section>
 );
