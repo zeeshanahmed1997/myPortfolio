@@ -109,18 +109,29 @@ body.dark-mode .skillsHeading {
 }
 
 .Skills-tile {
-  background-color: transparent;
+  background-color: #f0f0f0;
+  /* Light Gray */
   width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.Skills-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+  /* Slightly darker gray on hover */
 }
 
 .Skills-tile i {
   font-size: 4.5rem;
   /* Increase icon size */
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .Projects a,
