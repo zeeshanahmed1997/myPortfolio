@@ -60,6 +60,20 @@ section {
   /* Deep Blue Teal */
 }
 
+/* Default styles for the heading */
+.skillsHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  /* Dark color for light mode */
+}
+
+/* Styles for dark mode */
+body.dark-mode .skillsHeading {
+  color: #f0f0f0;
+  /* Light color for dark mode */
+}
+
 .Skills,
 .Projects,
 .Contact {

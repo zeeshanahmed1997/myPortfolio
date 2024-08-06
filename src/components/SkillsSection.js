@@ -3,7 +3,7 @@ import React from 'react';
 
 const SkillsSection = () => (
     <section id="skills" className="Skills">
-        <h2>Skills</h2>
+        <h2 className='skillsHeading'>Skills</h2>
         <div className="Skills-container">
             <div className="Skills-tile">
                 <i className="devicon-dotnetcore-plain colored"></i>
