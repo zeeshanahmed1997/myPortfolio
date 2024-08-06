@@ -1,6 +1,7 @@
 import projectImage1 from './assets/images/ecommerce.png';
 import projectImage2 from './assets/images/linscriptum.png';
 import projectImage3 from './assets/images/lotusai.png';
+import projectImage4 from './assets/images/wecharge.png';
 
 const projects = [
     {
@@ -38,6 +39,18 @@ const projects = [
             database: ['MySql'],
         },
         image: projectImage3,
+    },
+    {
+        id: 4,
+        title: 'WeCharge',
+        shortDescription: 'A time tracking tool for legal professionals with a focus on client confidentiality and accuracy.',
+        fullDescription: 'Lotus Ai is a reliable time tracking tool designed for legal professionals, offering intuitive design, client confidentiality, effortless integration, accurate time tracking, and customizable settings.',
+        technologies: {
+            frontend: ['Xamarin/Maui'],
+            backend: ['ASP.NET Core Web Api'],
+            database: ['MySql'],
+        },
+        image: projectImage4,
     },
 ];
 

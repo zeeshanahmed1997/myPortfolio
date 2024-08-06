@@ -415,6 +415,7 @@ input:checked+.slider:before {
   overflow: hidden;
   transition: transform 0.9s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   height: 500px;
+  width: 500px;
   border: 1px solid gainsboro;
   /* Adjust height to fit content */
   margin: auto;
@@ -517,7 +518,9 @@ input:checked+.slider:before {
   }
 
   .card {
-    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    height: auto;
     /* Full width on smaller screens */
   }
 }

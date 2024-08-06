@@ -11,6 +11,7 @@ const ProjectsSection = ({ projects }) => (
                             <img src={project.image} className="card-img-top" alt={project.title} />
                             <div className="card-body">
                                 <h2 className="card-title">{project.title}</h2>
+                                <p>{project.shortDescription}</p>
                                 <div className="technologies">
                                     {Object.entries(project.technologies).map(([category, techs], index) => (
                                         <div key={index} className="tech-category" style={{ textAlign: 'center', justifyContent: 'center' }}>
