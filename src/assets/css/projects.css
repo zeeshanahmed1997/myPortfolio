@@ -1,0 +1,152 @@
+.Projects {
+    background-color: #ffffff;
+    /* White */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for light mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Projects a {
+    color: #0fa4af;
+    /* Bright Teal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Projects a:hover {
+    color: #003135;
+    /* Dark Teal */
+}
+
+.dark-mode .Projects a {
+    color: #0fa4af;
+    /* Bright Teal */
+}
+
+.dark-mode .Projects a:hover {
+    color: #afdde5;
+    /* Pale Blue */
+}
+
+.dark-mode .card-title {
+    color: #ffffff;
+    /* White */
+}
+
+.dark-mode .card-text {
+    color: #afdde5;
+    /* Pale Blue */
+}
+
+/* Card Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards horizontally */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for mobile */
+    justify-content: center;
+    /* Center the cards horizontally */
+}
+
+.card {
+    overflow: hidden;
+    transition: transform 0.9s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 500px;
+    width: 500px;
+    border: 1px solid gainsboro;
+    /* Adjust height to fit content */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    /* Adjust height as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    /* Adjust height as needed */
+    transition: color 0.3s ease;
+}
+
+.dark-mode .card {
+    background-color: #003135;
+    /* Dark Teal */
+    color: #afdde5;
+    /* Pale Blue */
+}
+
+.card-text-content {
+    position: absolute;
+    font-size: 15px;
+    top: 100%;
+    /* Start position for scrolling */
+    animation: scroll-up 10s linear infinite;
+    /* Adjust the duration as needed */
+    white-space: pre-wrap;
+    /* Maintain line breaks */
+    word-wrap: break-word;
+    text-align: start;
+    /* Break long words */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Stack cards vertically */
+    }
+
+    .card {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: auto;
+        width: 100%;
+        margin: 5px 0;
+    }
+}

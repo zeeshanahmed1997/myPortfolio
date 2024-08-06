@@ -1,0 +1,100 @@
+/* Default styles for the heading */
+.skillsHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    /* Dark color for light mode */
+}
+
+/* Styles for dark mode */
+body.dark-mode .skillsHeading {
+    color: #f0f0f0;
+    /* Light color for dark mode */
+}
+
+.Skills,
+.Projects,
+.Contact {
+    background-color: #ffffff;
+    /* White */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for light mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Skills {
+    background-color: transparent;
+    /* Bright Teal */
+    color: #ffffff;
+    /* White */
+}
+
+.dark-mode .Skills {
+    background-color: #003135;
+    /* Dark Teal */
+    color: #afdde5;
+    /* Pale Blue */
+}
+
+.Skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Space between tiles */
+}
+
+.Skills-tile {
+    background-color: #f0f0f0;
+    /* Light Gray */
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.Skills-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    /* Slightly darker gray on hover */
+}
+
+.Skills-tile i {
+    font-size: 4.5rem;
+    /* Increase icon size */
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .Skills-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Skills-tile {
+        width: 20%;
+        font-size: 12px;
+    }
+
+    .Skills-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .Skills-tile {
+        width: 20%;
+        font-size: 12px;
+    }
+
+    .Skills-container {
+        flex-direction: row;
+    }
+}

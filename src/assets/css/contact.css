@@ -1,0 +1,22 @@
+.Contact a {
+    color: #0fa4af;
+    /* Bright Teal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Contact a:hover {
+    color: #003135;
+    /* Dark Teal */
+}
+
+
+.dark-mode .Contact a {
+    color: #0fa4af;
+    /* Bright Teal */
+}
+
+.dark-mode .Contact a:hover {
+    color: #afdde5;
+    /* Pale Blue */
+}

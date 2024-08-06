@@ -2,7 +2,7 @@ import projectImage1 from './assets/images/ecommerce.png';
 import projectImage2 from './assets/images/linscriptum.png';
 import projectImage3 from './assets/images/lotusai.png';
 import projectImage4 from './assets/images/wecharge.png';
-
+import './assets/css/projects.css'
 const projects = [
     {
         id: 1,

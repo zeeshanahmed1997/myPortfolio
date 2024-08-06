@@ -1,5 +1,6 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
+import '../assets/css/contact.css'
 
 const ContactSection = () => (
     <section id="contact" className="Contact">

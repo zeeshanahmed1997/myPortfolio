@@ -4,6 +4,7 @@
   background-color: #ffffff;
   /* Light mode background */
   transition: background-color 0.3s ease;
+  top: 200
 }
 
 .dark-mode .App {
@@ -47,6 +48,7 @@ section {
   background-color: #ffffff;
   /* White */
   border-radius: 8px;
+  margin-top: 50px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   /* Enhanced shadow for light mode */
   display: flex;
@@ -60,161 +62,6 @@ section {
   /* Deep Blue Teal */
 }
 
-/* Default styles for the heading */
-.skillsHeading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  /* Dark color for light mode */
-}
-
-/* Styles for dark mode */
-body.dark-mode .skillsHeading {
-  color: #f0f0f0;
-  /* Light color for dark mode */
-}
-
-.Skills,
-.Projects,
-.Contact {
-  background-color: #ffffff;
-  /* White */
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  /* Enhanced shadow for light mode */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.Skills {
-  background-color: transparent;
-  /* Bright Teal */
-  color: #ffffff;
-  /* White */
-}
-
-.dark-mode .Skills {
-  background-color: #003135;
-  /* Dark Teal */
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.Skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  /* Space between tiles */
-}
-
-.Skills-tile {
-  background-color: #f0f0f0;
-  /* Light Gray */
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.Skills-tile:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  background-color: #e0e0e0;
-  /* Slightly darker gray on hover */
-}
-
-.Skills-tile i {
-  font-size: 4.5rem;
-  /* Increase icon size */
-  transition: color 0.3s ease;
-}
-
-.Projects a,
-.Contact a {
-  color: #0fa4af;
-  /* Bright Teal */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.Projects a:hover,
-.Contact a:hover {
-  color: #003135;
-  /* Dark Teal */
-}
-
-.dark-mode .Projects a,
-.dark-mode .Contact a {
-  color: #0fa4af;
-  /* Bright Teal */
-}
-
-.dark-mode .Projects a:hover,
-.dark-mode .Contact a:hover {
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-/* Navbar Styles */
-.Navbar {
-  display: flex;
-  justify-content: space-between;
-  /* Align items to the left and right */
-  align-items: center;
-  padding: 10px;
-  background-color: #024950;
-  /* Deep Blue Teal */
-  color: #ffffff;
-  position: fixed;
-  z-index: 1000;
-  width: 99%;
-  top: 0;
-  /* White */
-}
-
-.dark-mode .Navbar {
-  background-color: #024950;
-  /* Deep Blue Teal */
-}
-
-.Navbar ul {
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.Navbar li {
-  margin: 0 15px;
-  /* Adjusted spacing for better alignment */
-}
-
-.Navbar a {
-  color: #ffffff;
-  /* White */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.Navbar a:hover {
-  color: #0fa4af;
-  /* Bright Teal */
-}
-
-.dark-mode .Navbar a {
-  color: #afdde5;
-  /* Pale Blue */
-}
-
-.dark-mode .Navbar a:hover {
-  color: #0fa4af;
-  /* Bright Teal */
-}
 
 /* Hamburger Menu Styles */
 .hamburger {
@@ -331,45 +178,13 @@ input:checked+.slider:before {
     word-break: break-all;
   }
 
-  .Navbar ul {
-    display: none;
-    /* Hide standard navbar on mobile */
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .Navbar.active ul {
-    display: flex;
-    /* Show navbar when hamburger menu is clicked */
-  }
-
-  .Navbar li {
-    margin: 10px 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
 
   .Profile-photo {
     width: 120px;
     height: 120px;
   }
 
-  .Skills-container {
-    display: flex;
-    flex-direction: row;
-  }
 
-  .Skills-tile {
-    width: 20%;
-    font-size: 12px;
-  }
-
-  .Skills-container {
-    flex-direction: row;
-  }
 }
 
 @media (max-width: 480px) {
@@ -382,118 +197,12 @@ input:checked+.slider:before {
     width: 95%;
   }
 
-  .Navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .Navbar li {
-    margin: 8px 0;
-  }
-
   .Profile-photo {
     width: 100px;
     height: 100px;
   }
 
-  .Skills-tile {
-    width: 20%;
-    font-size: 12px;
-  }
 
-  .Skills-container {
-    flex-direction: row;
-  }
-}
-
-/* Card Styles */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* Center the cards horizontally */
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  /* Allow wrapping for mobile */
-  justify-content: center;
-  /* Center the cards horizontally */
-}
-
-.card {
-  overflow: hidden;
-  transition: transform 0.9s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  height: 500px;
-  width: 500px;
-  border: 1px solid gainsboro;
-  /* Adjust height to fit content */
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  width: 100%;
-  height: 250px;
-  /* Adjust height as needed */
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-top {
-  transform: scale(1.1);
-}
-
-.card-body {
-  padding: 10px;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title {
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.card-text {
-  font-size: 0.8rem;
-  overflow: hidden;
-  position: relative;
-  height: 100px;
-  /* Adjust height as needed */
-  transition: color 0.3s ease;
-}
-
-.card-text-content {
-  position: absolute;
-  font-size: 15px;
-  top: 100%;
-  /* Start position for scrolling */
-  animation: scroll-up 10s linear infinite;
-  /* Adjust the duration as needed */
-  white-space: pre-wrap;
-  /* Maintain line breaks */
-  word-wrap: break-word;
-  text-align: start;
-  /* Break long words */
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  justify-content: center;
-  margin-top: 0px;
 }
 
 .tech-item {
@@ -522,52 +231,14 @@ input:checked+.slider:before {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    /* Stack cards vertically */
-  }
-
-  .card {
-    width: 100%;
-    margin: auto;
-    height: auto;
-    /* Full width on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    height: auto;
-    width: 100%;
-    margin: 5px 0;
-  }
-}
-
-.technologies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: start;
-  margin-top: 0px;
-}
 
 .tech-category {
   text-align: center !important;
 }
 
-.dark-mode .card {
-  background-color: #003135;
-  /* Dark Teal */
-  color: #afdde5;
-  /* Pale Blue */
-}
 
-.dark-mode .card-title {
-  color: #ffffff;
-  /* White */
-}
+
+
 
 .dark-mode .tech-tile {
   background-color: #0fa4af;
@@ -578,10 +249,7 @@ input:checked+.slider:before {
   /* Enhanced shadow for dark mode */
 }
 
-.dark-mode .card-text {
-  color: #afdde5;
-  /* Pale Blue */
-}
+
 
 .Resume-link {
   display: inline-block;

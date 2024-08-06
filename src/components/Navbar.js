@@ -1,5 +1,6 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
+import '../assets/css/navbar.css'
 
 const Navbar = ({ darkMode, toggleTheme, navbarOpen, toggleNavbar, resume }) => (
     <header className="App-header">

@@ -1,6 +1,6 @@
 import React from 'react';
 // import 'devicon/devicon.min.css'; // Make sure to import the Devicon stylesheet
-
+import '../assets/css/skills.css'
 const SkillsSection = () => (
     <section id="skills" className="Skills">
         <h2 className='skillsHeading'>Skills</h2>
