@@ -13,7 +13,7 @@ const HomeSection = ({ profilePhoto, welcomeText, welcomeTextCompleted, introTex
                 ))}
             </span>
         </h1>
-        <p className="App-intro">{introText}</p> {/* Removed typewriter effect here */}
+        <p className="App-intro">{introText}</p>
     </section>
 );
 

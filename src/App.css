@@ -36,12 +36,29 @@
   /* Light mode text color */
   margin: 20px auto;
   width: 80%;
-  animation: slideIn 2s ease-in-out;
+  /* animation: slideIn 2s ease-in-out; */
 }
 
 .dark-mode .App-intro {
   color: #e0e0e0;
   /* Light Gray text color for dark mode */
+}
+
+.App-intro {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
 }
 
 section {
@@ -179,7 +196,7 @@ input:checked+.slider:before {
     font-size: 14px;
     display: block;
     width: 100%;
-    word-wrap: break-word;
+    word-wrap: normal;
     /* Breaks long words and wraps text to the next line */
     word-break: break-all;
   }
