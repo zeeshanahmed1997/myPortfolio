@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    /* Adjusted padding for better spacing */
     background-color: #024950;
     /* Deep Blue Teal */
     color: #ffffff;
@@ -13,12 +14,17 @@
     top: 0;
     box-sizing: border-box;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    /* Refined font */
+    border-bottom: 2px solid #0fa4af;
+    /* Add a solid border for a touch of style */
 }
 
 .Navbar:hover {
     background-color: #023c4c;
     /* Slightly darker shade on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
 }
 
 .Navbar ul {
@@ -28,10 +34,14 @@
     padding: 0;
     flex-grow: 1;
     justify-content: center;
+    transition: opacity 0.3s ease;
 }
 
 .Navbar li {
-    margin: 0 15px;
+    margin: 0 20px;
+    /* Increased margin for better spacing */
+    position: relative;
+    /* For pseudo-element positioning */
 }
 
 .Navbar a {
@@ -39,15 +49,39 @@
     /* White */
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    /* Increased padding for better touch targets */
+    border-radius: 25px;
+    /* More rounded corners */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    /* For pseudo-element positioning */
+}
+
+.Navbar a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #0fa4af;
+    /* Bright Teal underline */
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.Navbar a:hover::before {
+    width: 100%;
 }
 
 .Navbar a:hover {
-    color: #ffffff;
-    background-color: #0fa4af;
-    /* Bright Teal background on hover */
+    color: #0fa4af;
+    /* Bright Teal text on hover */
+    background-color: #ffffff;
+    /* White background on hover */
+    transform: scale(1.1);
+    /* Subtle zoom effect */
 }
 
 .dark-mode .Navbar a {
@@ -56,9 +90,10 @@
 }
 
 .dark-mode .Navbar a:hover {
-    color: #ffffff;
-    background-color: #0fa4af;
-    /* Bright Teal background on hover */
+    color: #0fa4af;
+    /* Bright Teal text on hover */
+    background-color: #ffffff;
+    /* White background on hover */
 }
 
 .hamburger {
@@ -68,15 +103,20 @@
     padding: 10px;
     margin-left: auto;
     /* Align to the right */
+    position: relative;
+    /* For animation */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hamburger rotation */
 }
 
 .hamburger div {
-    width: 25px;
+    width: 30px;
+    /* Increased width for better visibility */
     height: 3px;
     background-color: #ffffff;
     margin: 5px 0;
     border-radius: 2px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hamburger:hover div {
@@ -84,10 +124,27 @@
     /* Change color on hover */
 }
 
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    /* Animated line transformation */
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle line when active */
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    /* Animated line transformation */
+}
+
 @media (max-width: 768px) {
     .Navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px 20px;
+        /* Adjusted padding for mobile */
     }
 
     .Navbar ul {
@@ -99,26 +156,33 @@
         background-color: #024950;
         /* Deep Blue Teal */
         position: absolute;
-        top: 50px;
+        top: 60px;
+        /* Adjust as needed */
         left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* Enhanced shadow */
         z-index: 999;
         /* Ensure it appears above other content */
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
 
     .Navbar.active ul {
         display: flex;
         /* Show navbar when hamburger menu is clicked */
+        opacity: 1;
+        /* Fade in */
     }
 
     .Navbar li {
-        margin: 10px 0;
+        margin: 15px 0;
+        /* Increased margin for better spacing */
     }
 
     .hamburger {
         display: flex;
         position: absolute;
-        top: 0px;
+        top: 5px;
         /* Adjust as needed */
         right: 20px;
         /* Adjust as needed */
@@ -132,6 +196,7 @@
     }
 
     .Navbar li {
-        margin: 8px 0;
+        margin: 12px 0;
+        /* Adjusted margin for smaller screens */
     }
 }

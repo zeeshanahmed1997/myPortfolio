@@ -87,6 +87,11 @@ section {
   /* Hide overflow */
 }
 
+html {
+  scroll-behavior: smooth;
+  /* Smooth scrolling for the entire page */
+}
+
 .dark-mode .Home {
   background-color: #024950;
   /* Deep Blue Teal */
