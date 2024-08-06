@@ -1,10 +1,10 @@
 import React from 'react';
 
-const HomeSection = ({ profilePhoto, welcomeText, welcomeTextCompleted, introText }) => (
+const HomeSection = ({ profilePhoto, welcomeText, introText }) => (
     <section id="home" className="Home">
         <img src={profilePhoto} alt="Profile" className="Profile-photo" />
         <h1 className="App-title">
-            <span className={`typewriter ${welcomeTextCompleted ? 'no-cursor' : ''}`}>
+            <span >
                 {welcomeText.split('portfolio').map((part, index) => (
                     <React.Fragment key={index}>
                         {part}

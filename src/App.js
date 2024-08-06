@@ -27,27 +27,6 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setWelcomeText(welcomeMessage.slice(0, index));
-      index += 1;
-      if (index > welcomeMessage.length) {
-        clearInterval(interval);
-        setWelcomeTextCompleted(true); // Update state to remove cursor
-      }
-    }, 100); // Adjust typing speed here
-  }, [welcomeMessage]);
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setIntroText(introMessage.slice(0, index));
-      index += 1;
-      if (index > introMessage.length) clearInterval(interval);
-    }, 50); // Adjust typing speed here
-  }, [introMessage]);
-
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     if (!darkMode) {
@@ -74,9 +53,8 @@ function App() {
       />
       <HomeSection
         profilePhoto={profilePhoto}
-        welcomeText={welcomeText}
-        welcomeTextCompleted={welcomeTextCompleted}
-        introText={introText}
+        welcomeText={welcomeMessage}
+        introText={introMessage}
       />
       <AboutMe /> {/* Add the AboutMe component here */}
       <SkillsSection />
