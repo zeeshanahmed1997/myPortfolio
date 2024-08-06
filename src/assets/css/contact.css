@@ -1,22 +1,110 @@
+/* General Styles for Contact Section */
+.Contact {
+    background-color: #ffffff;
+    /* Light mode background */
+    color: #333;
+    /* Light mode text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for light mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .Contact {
+    background-color: #024950;
+    /* Deep Blue Teal for dark mode */
+    color: #f5f5f5;
+    /* Light text color for dark mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Enhanced shadow for dark mode */
+}
+
 .Contact a {
     color: #0fa4af;
-    /* Bright Teal */
+    /* Bright Teal for links in light mode */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .Contact a:hover {
     color: #003135;
-    /* Dark Teal */
+    /* Dark Teal for hover effect in light mode */
 }
 
-
 .dark-mode .Contact a {
-    color: #0fa4af;
-    /* Bright Teal */
+    color: #afdde5;
+    /* Pale Blue for links in dark mode */
 }
 
 .dark-mode .Contact a:hover {
-    color: #afdde5;
-    /* Pale Blue */
+    color: #0fa4af;
+    /* Bright Teal for hover effect in dark mode */
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item a {
+    margin-left: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+    /* Center the icons horizontally */
+}
+
+.social-icons h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.social-icon-links {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 10px;
+    /* Space between icons */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info a {
+        font-size: 0.9rem;
+    }
+
+    .social-icons h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-info a {
+        font-size: 0.8rem;
+    }
+
+    .social-icons h3 {
+        font-size: 1rem;
+    }
 }

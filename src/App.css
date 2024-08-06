@@ -4,7 +4,8 @@
   background-color: #ffffff;
   /* Light mode background */
   transition: background-color 0.3s ease;
-  top: 200
+  top: 200px;
+  /* Fixed typo: added px unit */
 }
 
 .dark-mode .App {
@@ -32,9 +33,15 @@
 .App-intro {
   font-size: 1.2rem;
   color: #333;
+  /* Light mode text color */
   margin: 20px auto;
   width: 80%;
   animation: slideIn 2s ease-in-out;
+}
+
+.dark-mode .App-intro {
+  color: #e0e0e0;
+  /* Light Gray text color for dark mode */
 }
 
 section {
@@ -61,7 +68,6 @@ section {
   background-color: #024950;
   /* Deep Blue Teal */
 }
-
 
 /* Hamburger Menu Styles */
 .hamburger {
@@ -178,13 +184,10 @@ input:checked+.slider:before {
     word-break: break-all;
   }
 
-
   .Profile-photo {
     width: 120px;
     height: 120px;
   }
-
-
 }
 
 @media (max-width: 480px) {
@@ -201,8 +204,6 @@ input:checked+.slider:before {
     width: 100px;
     height: 100px;
   }
-
-
 }
 
 .tech-item {
@@ -231,14 +232,9 @@ input:checked+.slider:before {
   }
 }
 
-
 .tech-category {
   text-align: center !important;
 }
-
-
-
-
 
 .dark-mode .tech-tile {
   background-color: #0fa4af;
@@ -248,8 +244,6 @@ input:checked+.slider:before {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   /* Enhanced shadow for dark mode */
 }
-
-
 
 .Resume-link {
   display: inline-block;
