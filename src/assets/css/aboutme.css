@@ -1,0 +1,41 @@
+/* src/components/AboutMe.css */
+.AboutMe {
+    background-color: #f9f9f9;
+    /* Light Gray for background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.AboutMe-title {
+    font-size: 2rem;
+    color: #003135;
+    /* Dark Teal */
+    margin-bottom: 10px;
+}
+
+.AboutMe-content {
+    font-size: 1.1rem;
+    color: #333;
+    /* Dark Gray */
+    line-height: 1.6;
+}
+
+.dark-mode .AboutMe {
+    background-color: #024950;
+    /* Deep Blue Teal */
+    color: #e0e0e0;
+    /* Light Gray text color */
+}
+
+.dark-mode .AboutMe-title {
+    color: #e0e0e0;
+    /* Light Gray */
+}
+
+.dark-mode .AboutMe-content {
+    color: #f0f0f0;
+    /* Slightly off-white */
+}

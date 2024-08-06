@@ -8,6 +8,7 @@ import HomeSection from './components/HomeSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
+import AboutMe from './components/AboutMe'; // Import the AboutMe component
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -77,6 +78,7 @@ function App() {
         welcomeTextCompleted={welcomeTextCompleted}
         introText={introText}
       />
+      <AboutMe /> {/* Add the AboutMe component here */}
       <SkillsSection />
       <ProjectsSection projects={projects} />
       <ContactSection />
