@@ -56,10 +56,12 @@
     /* Center the cards horizontally */
 }
 
+
+
 .card {
     overflow: hidden;
     transition: transform 0.9s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    /* height: 500px; */
+    height: 500px;
     width: 500px;
     border: 1px solid gainsboro;
     /* Adjust height to fit content */
@@ -76,7 +78,7 @@
 
 .tech-item {
     text-align: start;
-    /* padding: 5px; */
+    padding: 0px;
 }
 
 .tech-tile {
@@ -106,6 +108,7 @@
 .technologies {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .card-img-top {
@@ -169,6 +172,10 @@
         /* Stack cards vertically */
     }
 
+    h5 {
+        margin-left: 35px;
+    }
+
     .card {
         width: 100%;
         margin: auto;
@@ -177,15 +184,16 @@
     }
 
     .tech-category {
-        text-align: center !important;
+        text-align: start !important;
         width: 50% !important;
+        /* margin-left: 10px; */
     }
 }
 
 @media (max-width: 480px) {
     .card {
         height: auto;
-        width: 100%;
+        width: 90%;
         margin: 5px 0;
     }
 }
