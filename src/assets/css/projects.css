@@ -193,7 +193,6 @@
 @media (max-width: 480px) {
     .card {
         height: auto;
-        width: 90%;
         margin: 5px 0;
     }
 }
